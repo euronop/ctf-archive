@@ -1,0 +1,29 @@
+ifconfig em1 inet6 1234::2
+gcc -fPIC -shared -o time.so time.c
+setenv LD_PRELOAD /home/user/time.so
+
+
+#include <time.h>
+
+
+time_t time(time_t *pt)
+{
+        /*
+        time_t t = 1312605631;
+        time for format strin vulnerability
+        */
+
+        /*
+        time_t t = 1312606631;
+        time for "how many hands would you like to play?
+        */
+
+        time_t t = 1312606871;
+        /*
+        time for "I am thinking of a number between 1 and 100"
+        */
+
+        if (pt) *pt = t;
+
+        return t;
+}

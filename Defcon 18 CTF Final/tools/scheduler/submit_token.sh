@@ -1,0 +1,2 @@
+#!/bin/bash
+(sleep 1; echo "TOKENS" ; echo `sqlite3 ctf.db 'SELECT token FROM tokens WHERE submit_timestamp is NULL ORDER BY harvest_timestamp ASC LIMIT 1'` ; sleep 1) | openssl s_client -connect 10.31.100.100:2525 -cert ./cert/team_2_key.cert -key ./cert/team_2_key -CAfile ./cert/server.cert | ./update_token.pl `sqlite3 ctf.db 'SELECT token FROM tokens WHERE submit_timestamp is NULL ORDER BY harvest_timestamp ASC LIMIT 1'`

@@ -1,0 +1,5 @@
+
+each team's server ends in 2, you'll find more information once logged in.  Authentication information for you server can be found in the same place as this readme.  You initially must initially connect via SSH using the provided key.
+
+one cable is connected directly to your server, the other is your gateway to the game.  It's up to you to connect the two.  You're SLA will be 0 until you complete the link.  On the first day, you have 60 minutes to become familiar with your server before SLA is scored.
+

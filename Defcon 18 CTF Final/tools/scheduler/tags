@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DB_BIN_STATE_CREATE	db.h	23;"	d
+DB_BIN_STATE_TABLE	db.h	22;"	d
+DB_BIN_WORKER_CREATE	db.h	17;"	d
+DB_BIN_WORKER_TABLE	db.h	16;"	d
+DB_FILE	db.h	4;"	d
+DB_SERVICE_CREATE	db.h	11;"	d
+DB_SERVICE_TABLE	db.h	10;"	d
+DB_TEAM_CREATE	db.h	7;"	d
+DB_TEAM_TABLE	db.h	6;"	d
+ERROR	log.h	4;"	d
+FATAL	log.h	9;"	d
+SLEEP_INTERVAL	sploitd.c	12;"	d	file:
+_KILLER_H	killer.h	2;"	d
+__DB_H__	db.h	2;"	d
+__LOG_H__	log.h	2;"	d
+__SERVICE_H__	service.h	2;"	d
+__STATE_H__	state.h	2;"	d
+backdoored	bin_worker.h	/^	int backdoored; \/\/ move to state table$/;"	m	struct:bin_worker_t
+bin_worker_done	bin_worker.c	/^bin_worker_done(sqlite3 *db, int id) {$/;"	f
+bin_worker_get_last	bin_worker.c	/^bin_worker_get_last(sqlite3 *db, state_t *state, int *time_started, int *time_ended, char *type) {$/;"	f
+bin_worker_new	bin_worker.c	/^bin_worker_new(sqlite3 *db, state_t *state, char *type, int *id) {$/;"	f
+bin_worker_t	bin_worker.h	/^typedef struct bin_worker_t {$/;"	s
+bin_worker_t	bin_worker.h	/^} bin_worker_t;$/;"	t	typeref:struct:bin_worker_t
+db	killer.c	/^sqlite3 *db;$/;"	v
+db	sploit_worker.c	/^sqlite3 *db;$/;"	v
+db_file	populate_db.c	/^char *db_file = DB_FILE;$/;"	v
+db_file	sploitd.c	/^char *db_file = DB_FILE;$/;"	v
+do_noise	service.h	/^	int do_noise;$/;"	m	struct:service_t
+do_spawn	sploit_worker.c	/^do_spawn(sqlite3 *db, service_t *service, int team_id, int type) {$/;"	f	file:
+do_sploit	service.h	/^	int do_sploit;$/;"	m	struct:service_t
+file_noise	service.h	/^	char *file_noise;$/;"	m	struct:service_t
+file_sploit	service.h	/^	char *file_sploit;$/;"	m	struct:service_t
+handler_pid	state.h	/^	pid_t handler_pid;$/;"	m	struct:state_t
+harvest_t	bin_worker.h	/^typedef struct harvest_t {$/;"	s
+harvest_t	bin_worker.h	/^} harvest_t;$/;"	t	typeref:struct:harvest_t
+id	bin_worker.h	/^	int id;$/;"	m	struct:bin_worker_t
+id	bin_worker.h	/^	int id;$/;"	m	struct:harvest_t
+id	service.h	/^	int id;$/;"	m	struct:service_t
+id	state.h	/^	int id;$/;"	m	struct:state_t
+init_db	populate_db.c	/^init_db(char *db_file) {$/;"	f	file:
+killer	killer.c	/^killer(void) {$/;"	f
+log_file	sploit_worker.c	/^log_file(char *str) {$/;"	f
+main	populate_db.c	/^main(int argc, char **argv) {$/;"	f
+main	sploitd.c	/^main(int argc, char *argv[]) {$/;"	f
+name	service.h	/^	char *name;$/;"	m	struct:service_t
+noise_active	state.h	/^	int noise_active;$/;"	m	struct:state_t
+noise_freq_dif	service.h	/^	int noise_freq_dif;$/;"	m	struct:service_t
+noise_freq_min	service.h	/^	int noise_freq_min;$/;"	m	struct:service_t
+pid	bin_worker.h	/^	int pid;$/;"	m	struct:bin_worker_t
+service	bin_worker.h	/^	int service;$/;"	m	struct:bin_worker_t
+service	state.h	/^	int service;$/;"	m	struct:state_t
+service_dump	service.c	/^service_dump(service_t *service) {$/;"	f
+service_get	service.c	/^service_get(sqlite3 *db, service_t **service, int service_id) {$/;"	f
+service_t	service.h	/^typedef struct service_t {$/;"	s
+service_t	service.h	/^} service_t;$/;"	t	typeref:struct:service_t
+spawn_killer	sploitd.c	/^spawn_killer(void) {$/;"	f
+spawn_noise	sploit_worker.c	/^spawn_noise(sqlite3 *db, service_t *service, int team_id) {$/;"	f
+spawn_sploit	sploit_worker.c	/^spawn_sploit(sqlite3 *db, service_t *service, int team_id) {$/;"	f
+spawn_worker	sploitd.c	/^spawn_worker(void) {$/;"	f
+sploit_active	state.h	/^	int sploit_active;$/;"	m	struct:state_t
+sploit_freq_dif	service.h	/^	int sploit_freq_dif;$/;"	m	struct:service_t
+sploit_freq_min	service.h	/^	int sploit_freq_min;$/;"	m	struct:service_t
+sploit_worker	sploit_worker.c	/^sploit_worker(void) {$/;"	f
+state_do	state.c	/^state_do(sqlite3 *db, state_t **state, const char *sql) {$/;"	f	file:
+state_dump	state.c	/^state_dump(state_t *state) {$/;"	f
+state_get	state.c	/^state_get(sqlite3 *db, state_t **state, int team_id, int service_id) {$/;"	f
+state_get_by_pid	state.c	/^state_get_by_pid(sqlite3 *db, state_t **state, pid_t pid) {$/;"	f
+state_t	state.h	/^typedef struct state_t {$/;"	s
+state_t	state.h	/^} state_t;$/;"	t	typeref:struct:state_t
+state_tag	state.c	/^state_tag(sqlite3 *db, state_t **state) {$/;"	f
+status	bin_worker.h	/^	char *status;$/;"	m	struct:bin_worker_t
+team	bin_worker.h	/^	int team;$/;"	m	struct:bin_worker_t
+team	state.h	/^	int team;$/;"	m	struct:state_t
+time_activity	state.h	/^	int time_activity;$/;"	m	struct:state_t
+time_ended	bin_worker.h	/^	int time_ended;$/;"	m	struct:bin_worker_t
+time_harvested	bin_worker.h	/^	int time_harvested;$/;"	m	struct:harvest_t
+time_started	bin_worker.h	/^	int time_started;$/;"	m	struct:bin_worker_t
+time_submitted	bin_worker.h	/^	int time_submitted;$/;"	m	struct:harvest_t
+token_harvested	bin_worker.h	/^	char *token_harvested;$/;"	m	struct:bin_worker_t
+type	bin_worker.h	/^	char *type;     \/\/ "sploit" or "noise"$/;"	m	struct:bin_worker_t

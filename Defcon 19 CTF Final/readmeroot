@@ -1,0 +1,40 @@
+don't be a bitch
+
+Rulez
+-----
+1) thou shalt not DoS or thou shalt be right out
+2) thou shalt not attack physically
+3) thou shalt not have more than 8 people at your game table
+
+
+
+Infoz
+-----
+each team has a subnet dedicated to the team.  The naming scheme is obvious, team three has a 3 in the middle, teams are assigned sequential networks starting with 1.  You are to protect the host ending in 2 (and attack others').  Gateways end in 1.  Within your IP address range DDTEK owns 1-10 and you may assign freely in the range .11-254.
+
+one cable is connected directly to your server, the other is your gateway to the game.  It's up to you to connect the two.  You're SLA will be 0 until you complete the link.  On the first day, you have 60 minutes to become familiar with your server before SLA is scored.
+
+From your connection to the game network, you have access to the token submission server ([dc19:c7f:2011:80::5]:2525).  This interface requires SSL, the certs specific to your team can be found in the same place as this readme.  Supported commands include:
+
+STATUS - get service status information for your team.  this information is used for SLA calculations.  this information is from the LAST round of polling (it is not on demand)
+
+NEWKEY - get a new overwrite key.  this is the key that identifies your team, when you successfully overwrite a key on another teams server.  If you overwrite with something else, you don't get credit.  If somebody else overwrites using your key, they get credit.
+
+TOKENS - informs the server that you are about to send it one or more tokens that you have stolen.  You will receive some information about submitted keys, such as "OK", "Expired", "Duplicate", "Own flag", etc.
+
+
+
+keys expire after a few rounds.  you probably want to save keys you've submitted even after expiration, just in case.
+
+don't repeatedly submit the same keys.  you can only score using the key once, and keys are only changed out once per "round".  A round will be at least 60 seconds long, so don't submit faster than that.  DoSing the key submission server is a still a DoS.
+
+oh, and keys are 40 bytes by the way.
+
+ddtek reserves the right to amend, adapt, replace and completely change the rules of war at will
+
+Any questions should be directed to a DDTEK shihan by your team captain only.  Team captains must be prepared to provide the challenge phrase provided with the remainder of this documentation.
+
+ddtek gaijin are NOT authorized to answer questions, provide rulings, etc.  You can attempt to ask them questions, but they will likely direct you to romance a sheep.  gaijin may be used to deliver answers for some questions.
+
+
+~ddtek cr3w

